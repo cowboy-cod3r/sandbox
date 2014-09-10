@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+
+    Copyright (c) 2013 Intelligent Software Solutions
+    Unpublished-all rights reserved under the copyright laws of the United States.
+
+    This software was developed under sponsorship from the
+    Air Force Research Laboratory under FA8750-06-D-005 and FA8750-09-D-0022.
+
+    Contractor: Intelligent Software Solutions
+                5450 Tech Center Drive, Suite 400
+                Colorado Springs, 80919
+                http://www.issinc.com
+
+    Intelligent Software Solutions has title to the rights in this computer
+    software. The Government's rights to use, modify, reproduce, release, perform,
+    display, or disclose these technical data are restricted by paragraph (b)(1) of
+    the Rights in Technical Data-Noncommercial Items clause contained in
+    Contract No. FA8750-06-D-005 and No. FA8750-09-D-0022.
+    Any reproduction of technical data or portions thereof marked with this legend
+    must also reproduce the markings.
+
+    Intelligent Software Solutions does not grant permission inconsistent with the
+    aforementioned unlimited government rights to use, disclose, copy, or make
+    derivative works of this software to parties outside the Government.
+
+-->
+<!-- Hibernate Mapping Generated for WE : WE/ldm/class/WE_AUDIT -->
+<hibernate-mapping>
+    <typedef class="com.issinc.cdf.datasource.hibernate.type.BinaryBase64Type" name="base64_string"/>
+    <class entity-name="AuditRecordPL3" table="AUDITRECORDPL3" dynamic-insert="true" dynamic-update="true" >
+        <id name="AuditRecordId" column="AUDITRECORDID" type="string" length="255" unsaved-value="undefined">
+            <generator class="com.issinc.cdf.datasource.hibernate.generator.CDFGenerator">
+                <param name="hibernateGenerator">uuid</param>
+            </generator>
+        </id>
+ 
+        <property name="EventType" column="EVENTTYPE" type="materialized_clob" />
+        <property name="EventId" column="EVENTID" type="materialized_clob" />
+        <property name="UserId" column="USERID" type="materialized_clob" />
+        <property name="CorrelationId" column="CORRELATIONID" type="materialized_clob" />
+        <property name="EventDate" column="EVENTDATE" type="timestamp" />
+        <property name="EventSource" column="EVENTSOURCE" type="materialized_clob" />
+        <property name="EventProperties" column="EVENTPROPERTIES" type="materialized_clob" />
+        <property name="Result" column="RESULT_0" type="materialized_clob" />
+        <property name="Receiver" column="RECEIVER" type="materialized_clob" />
+        <property name="Sender" column="SENDER" type="materialized_clob" />
+        <property name="DataDescription" column="DATADESCRIPTION" type="materialized_clob" />
+        <property name="Resource" column="RESOURCE" type="materialized_clob" />
+    </class>
+</hibernate-mapping>
+

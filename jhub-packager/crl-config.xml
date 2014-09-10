@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jarhub config-version="2">
+  <properties>
+    <property name="chef-root" value="/path/to/chef-repo" actions="trim" validate="exists;directory;readable" />
+    <property name="crl-root" value="${chef-root}/jarhub/crl-files" actions="trim" validate="exists;directory;readable" />
+  </properties>
+
+  <cores>
+    <core name="default" description="The default core" wildcard="true">
+      <packagers>
+        <ruby-script name="crl-list" description="Gather .crl files into a zip file" script="crl-list.rb">
+          <!-- The path to your local directory containing .crl files -->
+          <bind name="crlLocation" value="${crlLocation}" />
+        </ruby-script>
+      </packagers>
+    </core>
+  </cores>
+</jarhub>

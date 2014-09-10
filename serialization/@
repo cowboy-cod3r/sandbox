@@ -1,0 +1,19 @@
+#!/opt/apps/ruby/ruby/bin/ruby
+
+require 'yaml'
+
+class Person
+  def initalize(f_name, l_name)
+    @f_name = f_name
+    @l_name = l_name
+  end
+end
+
+# Create an instance of the object
+person = Person.new("Sean", "Humbarger")
+
+# Serialize it via yaml
+puts "Serializing via yaml"
+serialized_yaml = YAML::dump(person)
+puts serialized_yaml 
+puts

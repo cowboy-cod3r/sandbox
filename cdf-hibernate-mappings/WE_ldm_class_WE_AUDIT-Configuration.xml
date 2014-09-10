@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<!--
+
+    Copyright (c) 2013 Intelligent Software Solutions
+    Unpublished-all rights reserved under the copyright laws of the United States.
+
+    This software was developed under sponsorship from the
+    Air Force Research Laboratory under FA8750-06-D-005 and FA8750-09-D-0022.
+
+    Contractor: Intelligent Software Solutions
+                5450 Tech Center Drive, Suite 400
+                Colorado Springs, 80919
+                http://www.issinc.com
+
+    Intelligent Software Solutions has title to the rights in this computer
+    software. The Government's rights to use, modify, reproduce, release, perform,
+    display, or disclose these technical data are restricted by paragraph (b)(1) of
+    the Rights in Technical Data-Noncommercial Items clause contained in
+    Contract No. FA8750-06-D-005 and No. FA8750-09-D-0022.
+    Any reproduction of technical data or portions thereof marked with this legend
+    must also reproduce the markings.
+
+    Intelligent Software Solutions does not grant permission inconsistent with the
+    aforementioned unlimited government rights to use, disclose, copy, or make
+    derivative works of this software to parties outside the Government.
+
+-->
+<!-- Hibernate Configuration Generated for WE : WE/ldm/class/WE_AUDIT -->
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class"><!--TODO: Enter Driver java class name - e.g. oracle.jdbc.driver.OracleDriver --></property>
+        <property name="hibernate.connection.url"><!--TODO: Enter jdbc url - e.g. jdbc:oracle:thin:@issoracle:1521:issoracle --></property>
+        <property name="hibernate.connection.username"><!--TODO: Enter Username --></property>
+        <property name="hibernate.connection.password"><!--TODO: Enter Password --></property>
+        <property name="hibernate.connection.pool_size">50</property>
+        
+        <property name="hibernate.transaction.factory_class">org.hibernate.transaction.JDBCTransactionFactory</property>
+        <property name="hibernate.order_by.default_null_ordering">last</property>
+        <!-- Set to true, if you want to see the Hibernate SQL statements (NOTE: values will not be shown) -->
+        <property name="hibernate.show_sql">false</property>
+        <property name="hibernate.format_sql">false</property>
+        
+
+        <mapping resource="/WE_ldm_class_WE_AUDIT-Mappings.xml"/>
+    </session-factory>
+</hibernate-configuration>

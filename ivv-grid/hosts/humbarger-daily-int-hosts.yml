@@ -1,0 +1,161 @@
+---
+:landing:            
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "landing"
+:openid:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "10443"
+  :context:             "openid-provider"
+:irs:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "irs"
+:indure:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "irs"
+:topic_builder:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8192"
+  :context:             "topic-builder"
+:stratus:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "geostratus"
+:sac:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "sac-webapp"
+:workflow:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "workflow-service"
+:resource:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "resource-service"
+:validation:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "validation-service"
+:alerting:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "alerting-service"
+:cdf:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "data-interface-service"
+:datamart:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "datamart-service"
+:export:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "export-service"
+:file-depot-xport:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "file-depot-xport"
+:form:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "form-service"
+:geoserver:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "geoserver"
+:imms:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "imms-service"
+:index:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "index-service"
+:media:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "media-service"
+:reporting:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "reporting-service" 
+:search:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "search-service" 
+:state:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "state-service" 
+:template:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "template-service"              
+:unclass-markings:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "unclass-markings-service" 
+:user-mgmt:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "user-mgmt-service"
+:geo-solr:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "geo-solr"
+:irs-solr:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "irs-solr-service"
+:rbac:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "rbac"
+:security:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "security-service"
+:capco:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "capco-service"
+:sts:
+  :ssl:                 true
+  :ip:                  "172.30.12.79"
+  :port:                "8443"
+  :context:             "sts-service"
