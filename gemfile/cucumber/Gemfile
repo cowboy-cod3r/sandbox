@@ -1,0 +1,9 @@
+# To execute this file so that the dependent gems install,
+# # execute the following:
+# #
+# #    bundle install
+## Install gems from each plugin
+Dir.glob(File.join(File.dirname(__FILE__), '..', "Gemfile")) do |gemfile|
+  eval(IO.read(gemfile), binding)
+end
+gem 'cucumber'

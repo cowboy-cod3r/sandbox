@@ -1,0 +1,13 @@
+# -*- ruby -*-
+
+require 'rubygems'
+require 'bundler'
+require 'hoe'
+
+# Run minitests
+Rake::TestTask.new do |t|
+  t.description = "Execute all minitests"
+  t.pattern = "test/test_*.rb"
+end
+
+# vim: syntax=ruby

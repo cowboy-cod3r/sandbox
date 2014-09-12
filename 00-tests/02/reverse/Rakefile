@@ -1,0 +1,40 @@
+# -*- ruby -*-
+
+require 'rubygems'
+require 'bundler'
+require 'hoe'
+
+# Hoe.plugin :compiler
+# Hoe.plugin :cucumberfeatures
+# Hoe.plugin :gem_prelude_sucks
+# Hoe.plugin :inline
+# Hoe.plugin :manifest
+# Hoe.plugin :newgem
+# Hoe.plugin :racc
+# Hoe.plugin :rcov
+# Hoe.plugin :rdoc
+# Hoe.plugin :website
+
+#Hoe.spec "reverse" do
+#  self.developer('Sean Humbarger', 'sean.humbarger@issinc.com')
+#  self.license "ISSINC"
+#end
+
+# Remove containers
+# Containers are 'Active' or 'Inactive' instantiations of images
+#desc "Removes ALL containers (running and not running) from your local host"
+#  task :containers do
+#  puts "INFO: Removing containers, this may take a while depending on the number of containers..."
+#  puts "============================================================================================"
+#  sh "if [[ -n $(docker ps -qa) ]]; then docker ps -qa | xargs docker rm -f;fi", :verbose => false
+#  puts "Done"
+#  puts
+#end
+
+# Run minitests
+Rake::TestTask.new do |t|
+  t.description = "Execute all minitests"
+  t.pattern = "test/test_*.rb"
+end
+
+# vim: syntax=ruby

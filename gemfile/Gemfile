@@ -1,0 +1,14 @@
+# To execute this file so that the dependent gems install,
+# # execute the following:
+# #
+# #    bundle install
+#
+# # == SOURCES
+# # Define the Sources for where the
+# # gems will live
+source 'http://172.20.11.254:8808'
+source 'https://rubygems.org'
+#
+# # == SOURCES
+# # Gems to Install for this project
+gem 'rake'

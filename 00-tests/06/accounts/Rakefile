@@ -1,0 +1,22 @@
+# -*- ruby -*-
+
+require "rubygems"
+require "hoe"
+
+# Hoe.plugin :compiler
+# Hoe.plugin :cucumberfeatures
+# Hoe.plugin :gem_prelude_sucks
+# Hoe.plugin :inline
+# Hoe.plugin :manifest
+# Hoe.plugin :newgem
+# Hoe.plugin :racc
+# Hoe.plugin :rcov
+# Hoe.plugin :rdoc
+# Hoe.plugin :website
+
+Hoe.spec "accounts" do
+  self.developer('Sean Humbarger', 'sean.humbarger@issinc.com')
+  self.license "ISSINC"
+end
+
+# vim: syntax=ruby

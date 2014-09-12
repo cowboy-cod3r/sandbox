@@ -1,0 +1,35 @@
+#!/opt/apps/ruby/ruby/bin/ruby
+$:.unshift(File.join(File.dirname(__FILE__),'..',"lib"))
+
+# Required Libraries
+require 'itriage/services/app'
+require 'rack'
+
+# == Description
+# This file serves as a wrapper around the 'rackup' command.
+# The reason we wrapped rackup is to give the rackup command
+# context of the itriage sinatra app, so that it knows
+# where to find the config.ru file.  From the command line,
+# the 'itriage' command takes all switches that are
+# supported by the rackup command
+class ItriageApp < Rack::Server; end
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Append the location of the config.ru file
+# to the ARGV constant
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+#config_ru = "config=#{File.join(gem_root_dir('ivv-monitoring'),'config.ru')}"
+config_ru = "config=#{File.join(File.dirname(__FILE__),'..','config.ru')}"
+puts("Appending config.ru location '#{config_ru}'")
+ARGV << "-O"
+ARGV << config_ru
+
+# Uncomment the following to change the port number of the thin server
+#ARGV << "-p"
+#ARGV << "8000"
+
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+# Start the process
+# ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+puts("Starting the Itriage Application...")
+ItriageApp.start()
