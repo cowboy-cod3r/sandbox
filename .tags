@@ -4,10 +4,11 @@
 !_TAG_PROGRAM_NAME	Exuberant Ctags	//
 !_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
 !_TAG_PROGRAM_VERSION	5.8	//
+Account	./00-tests/06/accounts/lib/itriage/account.rb	/^  class Account$/;"	c	class:Itriage
 Accounts	./00-tests/06/accounts/lib/accounts.rb	/^class Accounts$/;"	c
-Accounts	./00-tests/06/accounts/lib/itriage/account.rb	/^  class Accounts$/;"	c	class:Itriage
 Accounts	./00-tests/06/accounts/lib/itriage/accounts.rb	/^  class Accounts$/;"	c	class:Itriage
 Adapters	./ruby-design-patterns/adapter/adapter.rb	/^  class Adapters$/;"	c	class:Drive
+App	./00-tests/06/accounts/lib/itriage/services/app.rb	/^class App < Sinatra::Base$/;"	c
 Args	./options/args.rb	/^  class Args$/;"	c	class:PSI
 Args	./options/my-args.rb	/^  class Args$/;"	c	class:PSI
 AssertionError	./example.rb	/^class AssertionError < RuntimeError; end$/;"	c
@@ -56,16 +57,19 @@ Sean	./exit/exit.rb	/^  class Sean$/;"	c	class:Test
 Stats	./ruby-design-patterns/delegator/delegator.rb	/^class Stats$/;"	c
 Test	./exit/exit.rb	/^class Test$/;"	c
 TestAccounts	./00-tests/06/accounts/test/test_accounts.rb	/^class TestAccounts < Minitest::Test$/;"	c
+TestReverse	./00-tests/02/reverse/test/test_reverse.rb	/^class TestReverse < MiniTest::Unit::TestCase$/;"	c
+TestReverse	./00-tests/03/reverse/test/test_reverse.rb	/^class TestReverse < MiniTest::Unit::TestCase$/;"	c
 Truck	./ruby-design-patterns/adapter/adapter.rb	/^class Truck < Vehicle$/;"	c
 Twowheel	./ruby-design-patterns/adapter/adapter.rb	/^    class Twowheel$/;"	c	class:Drive.Adapters
 Vehicle	./ruby-design-patterns/adapter/adapter.rb	/^class Vehicle$/;"	c
 VersionDescriptor	./gen-rb/jar_hub_update_types.rb	/^class VersionDescriptor$/;"	c
-add_account	./00-tests/06/accounts/lib/itriage/account.rb	/^    def add_account(account)$/;"	f	class:Itriage.Accounts
+add	./00-tests/06/accounts/lib/itriage/accounts.rb	/^    def add(account)$/;"	f	class:Itriage.Accounts
 assert	./example.rb	/^def assert(condition, message)$/;"	f
 build_command	./sinatra/lib/ivv/system/memory/physical.rb	/^          def build_command()$/;"	f	class:IVV.Monitoring.Memory.Physical
 call_me	./blocks/test.rb	/^def call_me(url)$/;"	f
 define_options	./options/args.rb	/^      def define_options()$/;"	f	class:PSI.Args
 define_options	./options/my-args.rb	/^      def define_options()$/;"	f	class:PSI.Args
+delete	./00-tests/06/accounts/lib/itriage/accounts.rb	/^    def delete(id)$/;"	f	class:Itriage.Accounts
 down	./curses/curses.rb	/^  def down$/;"	f	class:Paddle
 draw	./curses/curses.rb	/^  def draw$/;"	f	class:Paddle
 drive	./ruby-design-patterns/adapter/adapter.rb	/^      def self.drive()$/;"	F	class:Drive.Adapters.Twowheel
@@ -74,17 +78,18 @@ drive	./ruby-design-patterns/adapter/adapter.rb	/^  def drive()$/;"	f	class:Vehi
 drive_adapter=	./ruby-design-patterns/adapter/adapter.rb	/^  def drive_adapter=(name)$/;"	f	class:Vehicle
 element_exists?	./blocks/wait.rb	/^def element_exists?()$/;"	f	class:wait_until
 full_name	./serialization/test.rb	/^  def full_name$/;"	f	class:MyPerson
+get	./00-tests/06/accounts/lib/itriage/accounts.rb	/^    def get(id)$/;"	f	class:Itriage.Accounts
 getLatestDebuggerVersion	./gen-rb/jar_hub_update_service.rb	/^    def getLatestDebuggerVersion(hostname)$/;"	f	class:JarHubUpdateService.Client
 getLatestProxyVersion	./gen-rb/jar_hub_update_service.rb	/^    def getLatestProxyVersion(hostname)$/;"	f	class:JarHubUpdateService.Client
 getLatestVersion	./gen-rb/jar_hub_update_service.rb	/^    def getLatestVersion(hostname)$/;"	f	class:JarHubUpdateService.Client
 getServerApplicationVersion	./gen-rb/jar_hub_update_service.rb	/^    def getServerApplicationVersion()$/;"	f	class:JarHubUpdateService.Client
 getServerProtocolVersion	./gen-rb/jar_hub_update_service.rb	/^    def getServerProtocolVersion()$/;"	f	class:JarHubUpdateService.Client
 getServerUptime	./gen-rb/jar_hub_update_service.rb	/^    def getServerUptime()$/;"	f	class:JarHubUpdateService.Client
-get_account	./00-tests/06/accounts/lib/itriage/account.rb	/^    def get_account(id)$/;"	f	class:Itriage.Accounts
 get_physical_memory	./sinatra/lib/ivv/system/memory/physical.rb	/^          def get_physical_memory()$/;"	f	class:IVV.Monitoring.Memory.Physical
 get_ret_val	./io/child.rb	/^def get_ret_val()$/;"	f
-initialize	./00-tests/06/accounts/lib/itriage/account.rb	/^    def initialize()$/;"	f	class:Itriage.Accounts
-initialize	./00-tests/06/accounts/lib/itriage/accounts.rb	/^    def initialize(username, groups, password)$/;"	f	class:Itriage.Accounts
+initialize	./00-tests/06/accounts/lib/itriage/account.rb	/^    def initialize(id, username, groups, password)$/;"	f	class:Itriage.Account
+initialize	./00-tests/06/accounts/lib/itriage/accounts.rb	/^    def initialize()$/;"	f	class:Itriage.Accounts
+initialize	./00-tests/06/accounts/lib/itriage/services/app.rb	/^  def initialize()$/;"	f	class:App
 initialize	./curses/curses.rb	/^  def initialize$/;"	f	class:Paddle
 initialize	./fork/pipe.rb	/^    def initialize()$/;"	f	class:IvvPipe
 initialize	./object_test.rb	/^  def initialize()$/;"	f	class:Person
@@ -120,9 +125,10 @@ recv_registerProxyClient	./gen-rb/jar_hub_update_service.rb	/^    def recv_regis
 registerClient	./gen-rb/jar_hub_update_service.rb	/^    def registerClient(hostname, ip, version, timestamp)$/;"	f	class:JarHubUpdateService.Client
 registerDebuggerClient	./gen-rb/jar_hub_update_service.rb	/^    def registerDebuggerClient(hostname, ip, version, timestamp)$/;"	f	class:JarHubUpdateService.Client
 registerProxyClient	./gen-rb/jar_hub_update_service.rb	/^    def registerProxyClient(hostname, ip, version, timestamp)$/;"	f	class:JarHubUpdateService.Client
-remove_account	./00-tests/06/accounts/lib/itriage/account.rb	/^    def remove_account(id)$/;"	f	class:Itriage.Accounts
 required_switches	./options/args.rb	/^      def required_switches()$/;"	f	class:PSI.Args
 required_switches	./options/my-args.rb	/^      def required_switches()$/;"	f	class:PSI.Args
+reverse_sentence	./00-tests/02/reverse/exec.rb	/^def reverse_sentence(sentence)$/;"	f
+reverse_words_and_letters	./00-tests/03/reverse/exec.rb	/^def reverse_words_and_letters(sentence)$/;"	f
 send_getLatestDebuggerVersion	./gen-rb/jar_hub_update_service.rb	/^    def send_getLatestDebuggerVersion(hostname)$/;"	f	class:JarHubUpdateService.Client
 send_getLatestProxyVersion	./gen-rb/jar_hub_update_service.rb	/^    def send_getLatestProxyVersion(hostname)$/;"	f	class:JarHubUpdateService.Client
 send_getLatestVersion	./gen-rb/jar_hub_update_service.rb	/^    def send_getLatestVersion(hostname)$/;"	f	class:JarHubUpdateService.Client
@@ -155,7 +161,10 @@ struct_fields	./gen-rb/jar_hub_update_service.rb	/^    def struct_fields; FIELDS
 struct_fields	./gen-rb/jar_hub_update_service.rb	/^    def struct_fields; FIELDS; end$/;"	f	class:JarHubUpdateService.RegisterProxyClient_args
 struct_fields	./gen-rb/jar_hub_update_service.rb	/^    def struct_fields; FIELDS; end$/;"	f	class:JarHubUpdateService.RegisterProxyClient_result
 struct_fields	./gen-rb/jar_hub_update_types.rb	/^  def struct_fields; FIELDS; end$/;"	f	class:VersionDescriptor
+test_reverse_and_letters_easy	./00-tests/03/reverse/test/test_reverse.rb	/^  def test_reverse_and_letters_easy()$/;"	f	class:TestReverse
 test_sanity	./00-tests/06/accounts/test/test_accounts.rb	/^  def test_sanity$/;"	f	class:TestAccounts
+test_word_reversal	./00-tests/02/reverse/test/test_reverse.rb	/^  def test_word_reversal()$/;"	f	class:TestReverse
+to_json	./00-tests/06/accounts/lib/itriage/account.rb	/^      def to_json(*a)$/;"	f	class:Itriage.Account
 to_json	./serialization/test.rb	/^  def to_json(*a)$/;"	f	class:MyPerson
 to_json	./sinatra/lib/ivv/system/memory/physical.rb	/^          def to_json(*a)$/;"	f	class:IVV.Monitoring.Memory.Physical
 to_money	./open-classes/extensions.rb	/^  def to_money$/;"	f	class:Numeric

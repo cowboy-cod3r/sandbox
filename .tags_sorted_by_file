@@ -1,13 +1,22 @@
+reverse_sentence	/00-tests/02/reverse/exec.rb	/^def reverse_sentence(sentence)$/;"	f
+TestReverse	/00-tests/02/reverse/test/test_reverse.rb	/^class TestReverse < MiniTest::Unit::TestCase$/;"	c
+test_word_reversal	/00-tests/02/reverse/test/test_reverse.rb	/^  def test_word_reversal()$/;"	f	class:TestReverse
+reverse_words_and_letters	/00-tests/03/reverse/exec.rb	/^def reverse_words_and_letters(sentence)$/;"	f
+TestReverse	/00-tests/03/reverse/test/test_reverse.rb	/^class TestReverse < MiniTest::Unit::TestCase$/;"	c
+test_reverse_and_letters_easy	/00-tests/03/reverse/test/test_reverse.rb	/^  def test_reverse_and_letters_easy()$/;"	f	class:TestReverse
 Accounts	/00-tests/06/accounts/lib/accounts.rb	/^class Accounts$/;"	c
-Accounts	/00-tests/06/accounts/lib/itriage/account.rb	/^  class Accounts$/;"	c	class:Itriage
+Account	/00-tests/06/accounts/lib/itriage/account.rb	/^  class Account$/;"	c	class:Itriage
 Itriage	/00-tests/06/accounts/lib/itriage/account.rb	/^class Itriage$/;"	c
-add_account	/00-tests/06/accounts/lib/itriage/account.rb	/^    def add_account(account)$/;"	f	class:Itriage.Accounts
-get_account	/00-tests/06/accounts/lib/itriage/account.rb	/^    def get_account(id)$/;"	f	class:Itriage.Accounts
-initialize	/00-tests/06/accounts/lib/itriage/account.rb	/^    def initialize()$/;"	f	class:Itriage.Accounts
-remove_account	/00-tests/06/accounts/lib/itriage/account.rb	/^    def remove_account(id)$/;"	f	class:Itriage.Accounts
+initialize	/00-tests/06/accounts/lib/itriage/account.rb	/^    def initialize(id, username, groups, password)$/;"	f	class:Itriage.Account
+to_json	/00-tests/06/accounts/lib/itriage/account.rb	/^      def to_json(*a)$/;"	f	class:Itriage.Account
 Accounts	/00-tests/06/accounts/lib/itriage/accounts.rb	/^  class Accounts$/;"	c	class:Itriage
 Itriage	/00-tests/06/accounts/lib/itriage/accounts.rb	/^class Itriage$/;"	c
-initialize	/00-tests/06/accounts/lib/itriage/accounts.rb	/^    def initialize(username, groups, password)$/;"	f	class:Itriage.Accounts
+add	/00-tests/06/accounts/lib/itriage/accounts.rb	/^    def add(account)$/;"	f	class:Itriage.Accounts
+delete	/00-tests/06/accounts/lib/itriage/accounts.rb	/^    def delete(id)$/;"	f	class:Itriage.Accounts
+get	/00-tests/06/accounts/lib/itriage/accounts.rb	/^    def get(id)$/;"	f	class:Itriage.Accounts
+initialize	/00-tests/06/accounts/lib/itriage/accounts.rb	/^    def initialize()$/;"	f	class:Itriage.Accounts
+App	/00-tests/06/accounts/lib/itriage/services/app.rb	/^class App < Sinatra::Base$/;"	c
+initialize	/00-tests/06/accounts/lib/itriage/services/app.rb	/^  def initialize()$/;"	f	class:App
 TestAccounts	/00-tests/06/accounts/test/test_accounts.rb	/^class TestAccounts < Minitest::Test$/;"	c
 test_sanity	/00-tests/06/accounts/test/test_accounts.rb	/^  def test_sanity$/;"	f	class:TestAccounts
 call_me	/blocks/test.rb	/^def call_me(url)$/;"	f

@@ -1,0 +1,16 @@
+# == DESCRIPTION
+# Installs any defined gem dependencies
+#
+# == EXECUTION
+# In the current directory, issue the following command:
+#
+#   bundle install
+
+# Sources
+source 'https://rubygems.org'
+
+# Gem Dependencies
+gem 'rake'
+gem 'minitest'
+gem 'hoe'
+gem 'rest-client'
