@@ -1,0 +1,111 @@
+# TODO:
+# 1. Setup ~/.mutt/aliases
+# 2. Setup ~/.signature
+# 3. Setup ~/mutt/mutt_colors
+# 4. Source mailboxes
+
+
+#======================================================#
+# General Configs
+#
+set realname = "Sean Humbarger"            #
+set from = "sean.humbarger@issinc.com"     #
+set use_from = yes                         # Generate the 'From:' header field
+set envelope_from ="yes"                   # Mutt will try to derive the message's envelope sender from the "From:" header
+set signature="~/.signature"               # Standard signature appended to all emails
+set sendmail="/usr/bin/msmtp"              # Use msmtp instead of sendmail
+set hostname=issinc.com
+set abort_nosubject=yes                    # Cancel a message when subject is blank
+set postpone=ask-yes                       # Asks to postpone a message when not sent
+set include=no                             # Automatically quote message in reply
+#set mark_old=no                           # Don't mark unread as old
+set sort=threads                           # View your mail by threads, not strict date.
+set mail_check=30                          # Checkout your folders every 30s when active,
+set timeout=60                             # and timeout for idle. (Rough explanation).
+
+#======================================================#
+# IMAP Configs
+#
+# Internet Message Access Protocol (IMAP) is a
+# protocol for e-mail retrieval and storage as an
+# alternative to POP
+#
+set imap_user = "sean.humbarger\@issinc.com"
+set imap_pass = "Leal2014"
+
+#======================================================#
+# SMTP Configs
+#
+# SMTP is the standard protocol for sending email
+# traffic
+# Your smtp server is davmail which is on the localhost
+#
+set smtp_url = "smtp://$imap_user:$imap_pass@localhost:1025"
+
+#======================================================#
+# Mailbox Settings
+#
+set mbox_type=mbox                                             # Mailbox type
+set folder="imap://$imap_user:$imap_pass@localhost:1143/"      # Local mailboxes stored here
+set spoolfile = "+Inbox"                                       # the folder where your unfiltered mail arrives
+set record="+Sent Items"                                       # Where to store sent messages
+set postponed="+Drafts"                                        # Where to store draft messages
+set move=no                                                    # Don't move mail from spool
+set trash="+Deleted Items"
+set forward_format = "Fwd: %s"                                 # format for subject when forwarding
+alternative_order text/enriched text/plain text/html           # What mutt chosses first to show.
+auto_view text/html                                            # Configuration in .mailcap. Show html, use w3m to parse it (w3m is installed by default on Debian).
+
+#======================================================#
+# What to show and order of headers
+#
+ignore *
+unignore From: To: CC: Date: Subject: X-mailer: User-Agent:  # show only these
+hdr_order From: To: CC: Date: Subject: X-mailer: User-Agent: # and in this order
+set edit_headers=yes                                           # See the headers when editing
+
+#======================================================#
+# Editor
+#
+set editor="vim -c 'set tw=70 et' '+/^$' "                     # set the editor
+
+#======================================================#
+# Aliases are the way Mutt manges contacts
+# Alias file have three columns
+# * nickname
+# * longname
+# * email address
+#
+set alias_file = ~/mail/mutt_aliases # In their own file
+source ~/mail/mutt_aliases           # Source them
+set sort_alias=alias                 # Sort alphabetically
+
+#======================================================#
+# Colours: defaults are a little bleak so experiment!
+#
+source ~/mutt/mutt_colors            # In their own file
+
+#======================================================#
+# Lists: An example using the mutt-users list:
+#
+lists mutt-users
+subscribe mutt-users
+set followup_to=yes        # Sets 'Mail-Followup-To' header
+set honor_followup_to=yes
+fcc-hook mutt-user +mutt   # See your own posts using fcc
+
+#======================================================#
+# Mail Cache. Speeds up large folders
+#
+set header_cache=~/.mutt/cache/headers
+set message_cachedir=~/.mutt/cache/bodies
+set message_cache_clean=yes
+
+#======================================================#
+# Odds and ends
+#
+set markers          # mark wrapped lines of text in the pager with a +
+set smart_wrap       # Don't wrap mid-word
+set pager_context=5  # Retain 5 lines of previous page when scrolling.
+set status_on_top    # Status bar on top.
+push <show-version>  # Shows mutt version at startup
